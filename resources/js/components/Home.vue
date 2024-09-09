@@ -38,6 +38,18 @@
                 <p class="font-semibold">
                     {{ forecast?.current?.condition?.text }}
                 </p>
+                <p class="font-semibold">
+                    Temp: {{ forecast?.current?.temp_c }}
+                </p>
+                <p class="font-semibold">
+                    Humidity: {{ forecast?.current?.humidity }}
+                </p>
+                <p class="font-semibold">
+                   {{ (forecast?.current?.is_day == 1) ? 'Day' : 'Night' }}
+                </p>
+                <p class="font-semibold">
+                   {{ forecast?.location?.localtime }}
+                </p>
             </div>
         </div>
     </div>
