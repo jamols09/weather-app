@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Http;
 class WeatherController extends Controller
 {
 
+    /**
+     * Get the current weather of the user
+     * @return \Illuminate\Http\Client\Response
+     */
     public function current()
     {
         return Http::get(
@@ -19,6 +23,11 @@ class WeatherController extends Controller
         );
     }
 
+    /**
+     * Get the forecast of the weather
+     * @param string $country
+     * @return \Illuminate\Http\Client\Response
+     */
     public function forecast($country)
     {
         return Http::get(
